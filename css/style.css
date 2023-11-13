@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #151515;
+  color: #d75d11;
+}
+
+body {
+  background-color: #dddddd;
+}
+
+
+nav ul {
+  display:flex
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 0px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  transition: 1s;
+  color:#4d4d4d;
+  padding:0 10px 0 10px;
+  border-right: 1px solid #4d4d4d;
+}
+
+/* nav ul li a::before {
+  content: ' DKK ';
+
+} */
+
+nav ul li:last-child a {
+  border-right: none;
+}
+
+nav ul li a:hover {
+  color: #e100ff;
+
+}
+
+nav ul li ul {
+  display: none;
+/*  position: absolute;*/  
+  background-color: #30e4e7;
+  padding: 10px;
+  border-radius: 15px; 
+  position: absolute;
+  width: 150px;
+}
+
+nav ul li ul li {
+  padding: 10px;
+}
+
+
+nav ul li:hover ul {
+  display: block;
+}
+
+
+
+/* Main area */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: #fff;
+  /* border: 1px solid #d5d5d5; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 3px #101010;
+  position: relative;
+}
+
+.card-image img {
+  filter: grayscale(100%);
+  filter: blur(3px);
+  transition: 0.6s;
+}
+
+.card-image:hover img {
+  filter: grayscale(0%);
+  filter:blur(0px)
+}
+
+.floaty {
+  position: absolute;
+  top: 80px;
+
+  
+  padding:30px;
+  background-color: #11111199;
+  color:#ffffff
+ 
+}
+
+.card-bottom {
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+}
